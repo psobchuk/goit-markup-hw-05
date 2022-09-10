@@ -8,6 +8,11 @@
   --ls-3: 0.03em;
   --ls-2: 0.02em;
 
+  /* Розміри та жирність шрифту */
+  --main-txt-size: 14px;
+  --bold-f: 700;
+  --line-h: calc(16 / 14);
+
   /* Кольори тексту */
   --main-txt-color: #212121;
   --secondary-txt-color: #757575;
@@ -98,7 +103,7 @@ img {
 
 .header-logo {
   font-family: var(--secondary-font);
-  font-weight: 700;
+  font-weight: var(--bold-f);
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: var(--ls-3);
@@ -128,8 +133,8 @@ img {
   display: block;
   padding: 28px 0;
   font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  font-size: var(--main-txt-size);
+  line-height: var(--line-h);
   letter-spacing: var(--ls-2);
   color: var(--main-txt-color);
 
@@ -147,6 +152,7 @@ img {
   left: 0;
   bottom: -4.5px;
   opacity: 0;
+  transition: opacity 250ms var(--timing-function);
 }
 
 .header-link.current::after,
@@ -156,8 +162,8 @@ img {
 
 .header-contacts-list {
   font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  font-size: var(--main-txt-size);
+  line-height: var(--line-h);
   letter-spacing: var(--ls-2);
   color: var(--contacts-txt-color);
 }
@@ -235,7 +241,7 @@ img {
 .hero-button {
   background-color: var(--accent-bgc);
   font-family: inherit;
-  font-weight: 700;
+  font-weight: var(--bold-f);
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: var(--ls-6);
@@ -307,8 +313,8 @@ img {
 }
 
 .item-title {
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  font-size: var(--main-txt-size);
+  line-height: var(--line-h);
   letter-spacing: var(--ls-3);
   text-transform: uppercase;
 
@@ -316,13 +322,36 @@ img {
 }
 
 .features-item-desc {
-  font-size: 14px;
+  font-size: var(--main-txt-size);
   line-height: calc(24 / 14);
   letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
 }
 
 /* Чим ми займаємося */
+.services-list-item {
+  position: relative;
+}
+
+.services-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+
+  font-size: var(--main-txt-size);
+  line-height: var(--line-h);
+  font-weight: var(--bold-f);
+  letter-spacing: var(--ls-3);
+  color: var(--light-txt-color);
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
 
 /* Наша команда */
 .team.section {
@@ -428,7 +457,7 @@ img {
 
 .footer-logo {
   font-family: var(--secondary-font);
-  font-weight: 700;
+  font-weight: var(--bold-f);
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: var(--ls-3);
@@ -465,7 +494,7 @@ img {
 }
 
 .map-link {
-  font-size: 14px;
+  font-size: var(--main-txt-size);
   line-height: calc(24 / 14);
   letter-spacing: var(--ls-3);
   color: var(--light-txt-color);
@@ -474,7 +503,7 @@ img {
 
 .mail-link,
 .tel-link {
-  font-size: 14px;
+  font-size: var(--main-txt-size);
   line-height: calc(24 / 14);
   letter-spacing: var(--ls-3);
   color: var(--contacts-txt-color);
