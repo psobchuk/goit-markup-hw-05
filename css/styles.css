@@ -31,6 +31,9 @@
   /* Сітки */
   --indent: 30px;
   --items: 3;
+
+  /* Анімації */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -122,11 +125,33 @@ img {
 }
 
 .header-link {
+  display: block;
+  padding: 28px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: var(--ls-2);
   color: var(--main-txt-color);
+
+  position: relative;
+}
+
+.header-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-bgc);
+
+  position: absolute;
+  left: 0;
+  bottom: -4.5px;
+  opacity: 0;
+}
+
+.header-link.current::after,
+.header-link:hover::after {
+  opacity: 1;
 }
 
 .header-contacts-list {
