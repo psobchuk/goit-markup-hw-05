@@ -590,3 +590,37 @@ img {
   letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
 }
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+
+.project-card:hover .overlay {
+  transform: translateY(0%);
+}
+
+.overlay-desc {
+  color: var(--light-txt-color);
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: var(--ls3);
+}
