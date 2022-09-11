@@ -193,6 +193,7 @@ img {
   padding-bottom: 32px;
   color: var(--secondary-txt-color);
   fill: currentColor;
+  transition: opacity 250ms var(--timing-function);
 }
 
 .header-link.current,
@@ -250,6 +251,8 @@ img {
   padding: 8px 30px;
   border-radius: 4px;
   border-width: 0;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .hero-button:hover,
@@ -266,6 +269,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 1000ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -303,9 +307,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   cursor: pointer;
 }
 
@@ -458,6 +465,8 @@ img {
   border-radius: 50%;
 
   fill: var(--social-bgc);
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .social-link:hover,
@@ -490,6 +499,8 @@ img {
   border: 1px solid var(--social-brd);
   border-radius: 4px;
   fill: var(--social-bgc);
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .client-link:hover,
@@ -559,6 +570,8 @@ img {
   letter-spacing: var(--ls-3);
   color: var(--contacts-txt-color);
   font-style: normal;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .mail-link:hover,
@@ -598,6 +611,8 @@ img {
 
   border: 0;
   border-radius: 4px;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .category-button.current-button,
@@ -615,6 +630,8 @@ img {
 .project-link {
   display: block;
   text-decoration: none;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .project-link:hover {
@@ -662,7 +679,8 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
 }
 
 .project-card:hover .overlay {
