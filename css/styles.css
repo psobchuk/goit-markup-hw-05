@@ -271,6 +271,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 500ms var(--timing-function);
+  z-index: 1;
 }
 
 .backdrop.is-hidden {
