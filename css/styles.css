@@ -156,7 +156,8 @@ img {
 }
 
 .header-link.current::after,
-.header-link:hover::after {
+.header-link:hover::after,
+.header-link:focus::after {
   opacity: 1;
 }
 
