@@ -110,6 +110,7 @@ img {
   color: var(--accent-txt-color);
 
   margin-right: 93px;
+  transition: color 250ms var(--timing-function);
 }
 
 .header-logo-second {
@@ -139,6 +140,7 @@ img {
   color: var(--main-txt-color);
 
   position: relative;
+  transition: color 250ms var(--timing-function);
 }
 
 .header-link::after {
@@ -194,7 +196,7 @@ img {
   padding-bottom: 32px;
   color: var(--secondary-txt-color);
   fill: currentColor;
-  transition: opacity 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .header-link.current,
@@ -253,7 +255,8 @@ img {
   border-radius: 4px;
   border-width: 0;
 
-  transition: opacity 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 
 .hero-button:hover,
@@ -302,7 +305,7 @@ img {
   width: 30px;
   height: 30px;
 
-  background-color: transparent;
+  background-color: var(--main-bgc);
   border-radius: 50%;
   border-color: rgba(0, 0, 0, 0.1);
 
@@ -310,7 +313,7 @@ img {
   align-items: center;
   justify-content: center;
 
-  transition: opacity 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .modal-close-btn:hover,
@@ -357,6 +360,9 @@ img {
 }
 
 /* Особливості */
+.features.section {
+  padding-bottom: 0;
+}
 .features.list {
   --items: 4;
 }
@@ -393,7 +399,7 @@ img {
   position: relative;
 }
 
-.services-title {
+.services-title > p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -468,7 +474,8 @@ img {
 
   fill: var(--social-bgc);
 
-  transition: opacity 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
 }
 
 .social-link:hover,
@@ -502,7 +509,7 @@ img {
   border-radius: 4px;
   fill: var(--social-bgc);
 
-  transition: opacity 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 
 .client-link:hover,
@@ -529,6 +536,8 @@ img {
 
   display: block;
   margin-bottom: 20px;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .footer-logo-second {
@@ -573,7 +582,7 @@ img {
   color: var(--contacts-txt-color);
   font-style: normal;
 
-  transition: opacity 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .mail-link:hover,
@@ -614,7 +623,8 @@ img {
   border: 0;
   border-radius: 4px;
 
-  transition: opacity 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 
 .category-button.current-button,
@@ -632,8 +642,6 @@ img {
 .project-link {
   display: block;
   text-decoration: none;
-
-  transition: opacity 250ms var(--timing-function);
 }
 
 .project-link:hover {
